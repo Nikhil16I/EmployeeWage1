@@ -1,10 +1,25 @@
-   public class EmpWageComputation{
+  /*UserCase1*/
 
-            public static void main(String[] args){
+         public class EmpWageComputation{
 
-               System.out.println("WELCOME TO THE EMPLOYEE WAGE COMPUTATION PROGRAM");
+                      
+
+         public static void main(String[] args) {
+
+            int Present = 1;
 
 
-          }
- 
-}
+            double empCheck = Math.floor(Math.random() * 10) % 2; 
+                
+                     if (empCheck == Present)
+             
+                  System.out.println("Employee is Present");
+
+                   else
+
+                       System.out.println("Employee is Absent");
+
+
+                    }
+
+             }
