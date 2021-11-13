@@ -4,49 +4,38 @@ package employeewageC;
 
 	  public static final int Parttime = 1;
 	  public static final int Fulltime = 2;
-	  public static final int EmpRateprHr= 20;
-	  public static final int NumOfwrkDays = 2;
-	  public static final int MaxHrsinMnth = 10;
+	 
 
-       public void  ComputeEmployeewage(){
+       public void  ComputeEmployeewage(String companyname,int NumofwrkDays, int MaxHrsinMnth,int EmpRateprHr){
 	          int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
 
-	     while (totalEmpHrs <= MaxHrsinMnth &&totalWorkingDays <NumOfwrkDays) {
-	           totalWorkingDays++;
-	       int empCheck = (int) Math.floor(Math.random()* 18) % 3;
+                /*Introducing Company Name*/
 
-	    switch (empCheck) {
-	    case Parttime:
+while (totalEmpHrs <= MaxHrsinMnth &&totalWorkingDays <NumofwrkDays) {
+	      totalWorkingDays++;
+	 int empCheck = (int) Math.floor(Math.random()* 10) % 3;
 
-	    empHrs = 4;
-	    break;
-	    case Fulltime:
+       switch (empCheck) {
+    case Parttime: //is part time
+	empHrs = 4;
+	break;
 
-	    empHrs = 8;
-	    break;
+	case Fulltime:
+	empHrs = 8;    //is full time
+	break;
 
-	   default:       //if emp is Absent
+	default:       //if emp is Absent
+    empHrs = 0;
 
-	   empHrs = 0;
+        }
+
+	totalEmpHrs += empHrs;
+	 System.out.println(" Number of Days = " + totalWorkingDays + "   Employee Hour = " +empHrs);
 	}
 
-	  totalEmpHrs += empHrs;
-	    System.out.println(" no.of Days - " + totalWorkingDays + " Employee Hour - " +empHrs);
-	}
-
-	  int totalEmpwage = totalEmpHrs * EmpRateprHr;
+        int totalEmpwage = totalEmpHrs * EmpRateprHr;
 	        System.out.println();   //space
-	   System.out.println("Total Employee Wage = " + totalEmpwage);
-	}
+        System.out.println("Total Employee Wage = " + totalEmpwage);
+     }
 
 }
-
-
-
-
-
-
-
-
-
-
