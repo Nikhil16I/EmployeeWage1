@@ -1,0 +1,60 @@
+package employeewageC;
+
+public class EmpWageCompany {
+	
+}
+	final int EmpRateprHr;
+    final int totalwrkDays;
+    final int MaxHrsinMnth;
+    final String companyname;
+
+      int totalempwage;
+
+	public EmpWageCompany(int empRateprHr, int totalwrkDays, int maxHrsinMnth, String companyname, int totalempwage) {
+		super();
+		this.EmpRateprHr = empRateprHr;
+		this.totalwrkDays = totalwrkDays;
+		this.MaxHrsinMnth = maxHrsinMnth;
+		this.companyname = companyname;
+		this.totalempwage = totalempwage;
+	}
+
+	public int getTotalempwage() {
+		return totalempwage;
+	}
+
+	public void setTotalempwage(int totalempwage) {
+		this.totalempwage = totalempwage;
+	}
+
+	public int getEmpRateprHr() {
+		return EmpRateprHr;
+	}
+
+	public int getTotalwrkDays() {
+		return totalwrkDays;
+	}
+
+	public int getMaxHrsinMnth() {
+		return MaxHrsinMnth;
+	}
+
+	public String getCompanyname() {
+		return companyname;
+	}
+
+	@Override
+	public String toString() {
+		return "EmpWageCompany [totalempwage=" + totalempwage + "]";
+	}
+ 
+	
+	}
+	 
+
+
+
+
+
+ 
+	

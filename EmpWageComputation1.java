@@ -4,28 +4,21 @@ public class EmpWageComputation1 {
 	
 	    final  int Parttime = 1;
 	    final int Fulltime = 2;
-	    final int EmpRateprHr;
-	    final int totalwrkDays;
-	    final int MaxHrsinMnth;
-	    final String companyname;
-
-	 int totalempwage;
-	 
+	    
+	 int Numofcompanies =0;
      
-
-	public EmpWageComputation1(String companyname, int totalwrkDays, int maxHrsinMnth, int empRateprHr) {
-
-		this.EmpRateprHr = empRateprHr;
-		this.totalwrkDays = totalwrkDays;
-		this.MaxHrsinMnth = maxHrsinMnth;
-		this.companyname = companyname;
-	
+	 EmpWageCompany[]empwageCompanyArray = new EmpWageCompany[5];
+	 
+	 public void AddCompanyEmpWage(String companyname, int totalwrkDays, int MaxHrsinMnth, int EmpRateprHr) {
+		 empwageCompanyArray[Numofcompanies] = new EmpWageCompany(companyname, totalwrkDays, MaxHrsinMnth, EmpRateprHr);
+		 Numofcompanies++;
+	 }
+	public ComputeEmployeewage
+	for(int i = 0; i<Numofcompanies; i++) {
+		empwageCompanyArray[i].settotalempwage(this.ComputeEmployeewage(empwageCompanyArray[i]));
+		   System.out.println(empwageCompanyArray[i]);
 	}
-
-
 	
-	
-
 
 	public int ComputeEmployeewage(String companyname2, int numofwrkDays, int maxHrsinMnth2, int empRateprHr2){
 	          int empHrs = 0,    totalEmpHrs = 0, NumofDays = 0;
@@ -51,18 +44,11 @@ public class EmpWageComputation1 {
 	}
 
 	  totalEmpHrs += empHrs;
-	  EmpWage = totalEmpHrs * EmpRateprHr;
-	  totalempwage = totalempwage + EmpWage;
+	  EmpWage = totalEmpHrs * EmpWageCompany.EmpRateprHr;
+	  EmpWageCompany.totalempwage = EmpWageCompany.totalempwage + EmpWage;
 	}
-       return totalempwage;
+       return EmpWageCompany.totalempwage;
 	  
-	}
-
-
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return companyname +"Employee Wage is = " + totalempwage;
 	}
 
 
