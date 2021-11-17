@@ -19,7 +19,7 @@ static ArrayList<EmpWageCompany>empwageCompanyArray = new ArrayList<EmpWageCompa
 	public  void ComputeEmployeewage() {
 	for(int i = 0; i<empwageCompanyArray.size(); i++) {
 		EmpWageCompany empwageCompanyArray = empwageCompanyArray.get(i);
-		empwageCompanyArray.settotalempwage(this.ComputeEmployeewage(empwageCompanyArray));
+		empwageCompany.settotalempwage(this.ComputeEmployeewage(empwageCompanyArray));
 		   System.out.println(empwageCompanyArray);
 	}
 }
@@ -51,8 +51,9 @@ static ArrayList<EmpWageCompany>empwageCompanyArray = new ArrayList<EmpWageCompa
 	  EmpWage = totalEmpHrs * EmpWageCompany.EmpRateprHr;
 	  EmpWageCompany.totalempwage = EmpWageCompany.totalempwage + EmpWage;
 	}
-       return EmpWageCompany.totalempwage;
-	  
+       
+System.out.println(empWageCompany.companyname + "day=" + NumofDays + "wage=" +EmpWage+ "Employee hours="+empHrs+ );
+	return empWageCompany.totalempwage;
 	}
 
 
