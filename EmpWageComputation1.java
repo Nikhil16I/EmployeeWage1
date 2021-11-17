@@ -24,7 +24,7 @@ static ArrayList<EmpWageCompany>empwageCompanyArray = new ArrayList<EmpWageCompa
 	}
 }
 
-	public int ComputeEmployeewage(String companyname2, int numofwrkDays, int maxHrsinMnth2, int empRateprHr2){
+	public int ComputeEmployeewage(EmpWageCompany empwageCompanyArray){
 	          int empHrs = 0,    totalEmpHrs = 0, NumofDays = 0;
                int EmpWage = 0; 
                
