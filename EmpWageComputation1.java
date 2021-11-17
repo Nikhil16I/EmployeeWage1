@@ -1,5 +1,7 @@
 package employeewageC;
 
+import java.util.ArrayList;
+
 import employeewageC.EmpWageCompany.InterfaceEmpWageCompany;
 
 public class EmpWageComputation1 implements InterfaceEmpWageCompany {
@@ -7,18 +9,18 @@ public class EmpWageComputation1 implements InterfaceEmpWageCompany {
 	    final  int Parttime = 1;
 	    final int Fulltime = 2;
 	    
-	 int Numofcompanies =0;
      
-	 EmpWageCompany[]empwageCompanyArray = new EmpWageCompany[5];
+static ArrayList<EmpWageCompany>empwageCompanyArray = new ArrayList<EmpWageCompany>();
 	 
 	 public void AddCompanyEmpWage(String companyname, int totalwrkDays, int MaxHrsinMnth, int EmpRateprHr) {
-		 empwageCompanyArray[Numofcompanies] = new EmpWageCompany(companyname, totalwrkDays, MaxHrsinMnth, EmpRateprHr);
-		 Numofcompanies++;
+		 EmpWageCompany EmpWageCompany = new EmpWageCompany(companyname, totalwrkDays, MaxHrsinMnth, EmpRateprHr);
+		 empwageCompanyArray.add(EmpWageCompany)
 	 }
 	public  void ComputeEmployeewage() {
-	for(int i = 0; i<Numofcompanies; i++) {
-		empwageCompanyArray[i].settotalempwage(this.ComputeEmployeewage(empwageCompanyArray[i]));
-		   System.out.println(empwageCompanyArray[i]);
+	for(int i = 0; i<empwageCompanyArray.size(); i++) {
+		EmpWageCompany empwageCompanyArray = empwageCompanyArray.get(i);
+		empwageCompanyArray.settotalempwage(this.ComputeEmployeewage(empwageCompanyArray));
+		   System.out.println(empwageCompanyArray);
 	}
 }
 
