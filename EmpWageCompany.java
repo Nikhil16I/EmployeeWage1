@@ -1,8 +1,12 @@
 package employeewageC;
 
 public class EmpWageCompany {
-	
-}
+	interface InterfaceEmpWageCompany {
+		public abstract void AddCompanyEmpWage(String companyname, int totalwrkDays, int maxHrsinMnth, int empRateprHr);
+
+		public abstract void ComputeEmployeewage();
+	}
+
 	final int EmpRateprHr;
     final int totalwrkDays;
     final int MaxHrsinMnth;

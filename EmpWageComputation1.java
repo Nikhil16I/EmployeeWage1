@@ -1,6 +1,8 @@
 package employeewageC;
 
-public class EmpWageComputation1 {
+import employeewageC.EmpWageCompany.InterfaceEmpWageCompany;
+
+public class EmpWageComputation1 implements InterfaceEmpWageCompany {
 	
 	    final  int Parttime = 1;
 	    final int Fulltime = 2;
@@ -13,12 +15,12 @@ public class EmpWageComputation1 {
 		 empwageCompanyArray[Numofcompanies] = new EmpWageCompany(companyname, totalwrkDays, MaxHrsinMnth, EmpRateprHr);
 		 Numofcompanies++;
 	 }
-	public ComputeEmployeewage
+	public  void ComputeEmployeewage() {
 	for(int i = 0; i<Numofcompanies; i++) {
 		empwageCompanyArray[i].settotalempwage(this.ComputeEmployeewage(empwageCompanyArray[i]));
 		   System.out.println(empwageCompanyArray[i]);
 	}
-	
+}
 
 	public int ComputeEmployeewage(String companyname2, int numofwrkDays, int maxHrsinMnth2, int empRateprHr2){
 	          int empHrs = 0,    totalEmpHrs = 0, NumofDays = 0;
