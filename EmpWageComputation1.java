@@ -14,7 +14,7 @@ static ArrayList<EmpWageCompany>empwageCompanyArray = new ArrayList<EmpWageCompa
 	 
 	 public void AddCompanyEmpWage(String companyname, int totalwrkDays, int MaxHrsinMnth, int EmpRateprHr) {
 		 EmpWageCompany EmpWageCompany = new EmpWageCompany(companyname, totalwrkDays, MaxHrsinMnth, EmpRateprHr);
-		 empwageCompanyArray.add(EmpWageCompany)
+		 empwageCompanyArray.add(EmpWageCompany);
 	 }
 	public  void ComputeEmployeewage() {
 	for(int i = 0; i<empwageCompanyArray.size(); i++) {
@@ -52,14 +52,27 @@ static ArrayList<EmpWageCompany>empwageCompanyArray = new ArrayList<EmpWageCompa
 	  EmpWageCompany.totalempwage = EmpWageCompany.totalempwage + EmpWage;
 	}
        
-System.out.println(empWageCompany.companyname + "day=" + NumofDays + "wage=" +EmpWage+ "Employee hours="+empHrs+ );
-	return empWageCompany.totalempwage;
+System.out.println(EmpWageCompany.companyname + "day=" + NumofDays + "wage=" +EmpWage+ "Employee hours="+empHrs);
+	return EmpWageCompany.totalempwage;
 	}
 
 
+
+
+public void GettotalWage(String companyname) {
+	for (int i= 0; i < empwageCompanyArray.size(); i++) {
+		String name = empwageCompanyArray.get(i).companyname;
+		if(name.equals(companyname)) {
+			int totalempwage = empwageCompanyArray.get(i).totalempwage;
+			System.out.println(companyname + "Employee Total Wage = " +totalempwage);
+			break;
+		}
+		else {
+			continue;
+		}
+		}
+	}
 }
-
-
 
 
 

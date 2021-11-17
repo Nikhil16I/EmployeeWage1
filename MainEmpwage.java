@@ -12,5 +12,7 @@ obj.AddCompanyEmpWage("HCL", 35, 85, 30);
 
 
  obj.ComputeEmployeewage();
+  /*UC-14  Getting total wage fpr cpmpany*/
+ obj.GettotalWage("TCS");
   }
 }

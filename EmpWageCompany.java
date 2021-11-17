@@ -31,21 +31,7 @@ public class EmpWageCompany {
 		this.totalempwage = totalempwage;
 	}
 
-	public int getEmpRateprHr() {
-		return EmpRateprHr;
-	}
-
-	public int getTotalwrkDays() {
-		return totalwrkDays;
-	}
-
-	public int getMaxHrsinMnth() {
-		return MaxHrsinMnth;
-	}
-
-	public String getCompanyname() {
-		return companyname;
-	}
+	
 
 	@Override
 	public String toString() {
