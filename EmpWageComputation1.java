@@ -2,8 +2,6 @@ package employeewageC;
 
 import java.util.ArrayList;
 
-import employeewageC.EmpWageCompany.InterfaceEmpWageCompany;
-
 public class EmpWageComputation1 implements InterfaceEmpWageCompany {
 	
 	    final  int Parttime = 1;
